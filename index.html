@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radhika Sweets</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="images/radhika_sweets_logo.jpg" alt="Radhika Sweets Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Homepage: Hero Slider -->
+    <section id="home" class="hero-slider">
+        <h2 class="visually-hidden">Welcome to Radhika Sweets</h2>
+        <div class="slide active" style="background-image: url('images/peda.jpg');">
+            <div class="slide-content">
+                <h1>Welcome to Radhika Sweets!</h1>
+                <p>Indulge in the authentic taste of Mathura's finest sweets.</p>
+                <a href="#products"><button class="btn-explore">Explore Our Sweets</button></a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('images/kesar_barfi.jpg');">
+            <div class="slide-content">
+                <h1>Try Our Khoya Sweets</h1>
+                <p>From Peda to Milk Cake, savor the tradition!</p>
+                <a href="#products"><button class="btn-explore">Explore Now</button></a>
+            </div>
+        </div>
+        <div class="slide" style="background-image: url('images/milk_cake.jpg');">
+            <div class="slide-content">
+                <h1>Chenna Sweets Delight</h1>
+                <p>Gulab Jamun, Rabri, and more await you!</p>
+                <a href="#products"><button class="btn-explore">Discover More</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="container section">
+        <h2 class="text-center mb-4">About Us</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p>Radhika Sweets has been a cherished part of Mathura since 1990, bringing the authentic taste of traditional Indian sweets to locals and tourists alike. Our commitment to quality and heritage ensures every bite is a delightful experience.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="images/milk_cake.jpg" alt="Milk Cake - A traditional Indian sweet" class="img-fluid rounded about-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="product-section section">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Products</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-center">Khoya Sweets</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="product-card" onclick="showSweetDetails('peda')">
+                                <img src="images/peda.jpg" alt="Peda - A khoya-based Indian sweet">
+                                <h5>Peda</h5>
+                                <p>420/-</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product-card" onclick="showSweetDetails('kesar-barfi')">
+                                <img src="images/kesar_barfi.jpg" alt="Kesar Barfi - Saffron-flavored khoya sweet">
+                                <h5>Kesar Barfi</h5>
+                                <p>440/-</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product-card" onclick="showSweetDetails('milk-cake')">
+                                <img src="images/milk_cake.jpg" alt="Milk Cake - A caramelized milk sweet">
+                                <h5>Milk Cake</h5>
+                                <p>460/-</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="text-center">Chenna Sweets</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="product-card" onclick="showSweetDetails('chamcham')">
+                                <img src="images/chamcham.jpg" alt="Chamcham - A chenna-based sweet">
+                                <h5>Chamcham</h5>
+                                <p>380/-</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product-card" onclick="showSweetDetails('gulab-jamun')">
+                                <img src="images/gulab_jamun.jpg" alt="Gulab Jamun - Syrup-soaked dough balls">
+                                <h5>Gulab Jamun</h5>
+                                <p>380/-</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product-card" onclick="showSweetDetails('rabri')">
+                                <img src="images/rabri.jpg" alt="Rabri - A creamy milk dessert">
+                                <h5>Rabri</h5>
+                                <p>380/-</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sweet Details Sections -->
+            <div id="peda-details" class="sweet-details">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center">
+                        <img src="images/peda.jpg" alt="Peda - A khoya-based Indian sweet">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Peda</h3>
+                        <p>Price: 420/-</p>
+                        <p>A traditional Indian sweet made from khoya, sugar, and garnished with pistachios. Perfect for festivals and celebrations like Diwali and Rakhi.</p>
+                        <button class="btn-close-details" onclick="hideSweetDetails()">Close</button>
+                        <button class="btn-back" onclick="hideSweetDetails()">Back to Products</button>
+                    </div>
+                </div>
+            </div>
+            <div id="kesar-barfi-details" class="sweet-details">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center">
+                        <img src="images/kesar_barfi.jpg" alt="Kesar Barfi - Saffron-flavored khoya sweet">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Kesar Barfi</h3>
+                        <p>Price: 440/-</p>
+                        <p>A rich saffron-flavored barfi made with khoya, sugar, and garnished with slivers of pistachio and saffron strands. A royal treat for special occasions.</p>
+                        <button class="btn-close-details" onclick="hideSweetDetails()">Close</button>
+                        <button class="btn-back" onclick="hideSweetDetails()">Back to Products</button>
+                    </div>
+                </div>
+            </div>
+            <div id="milk-cake-details" class="sweet-details">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center">
+                        <img src="images/milk_cake.jpg" alt="Milk Cake - A caramelized milk sweet">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Milk Cake</h3>
+                        <p>Price: 460/-</p>
+                        <p>A delectable milk-based sweet with a caramelized top, made by slow-cooking milk with sugar and garnished with nuts. Loved for its rich texture.</p>
+                        <button class="btn-close-details" onclick="hideSweetDetails()">Close</button>
+                        <button class="btn-back" onclick="hideSweetDetails()">Back to Products</button>
+                    </div>
+                </div>
+            </div>
+            <div id="chamcham-details" class="sweet-details">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center">
+                        <img src="images/chamcham.jpg" alt="Chamcham - A chenna-based sweet">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Chamcham</h3>
+                        <p>Price: 380/-</p>
+                        <p>Soft and spongy chenna-based sweet, soaked in sugar syrup and garnished with pistachios and saffron. A delightful treat for any celebration.</p>
+                        <button class="btn-close-details" onclick="hideSweetDetails()">Close</button>
+                        <button class="btn-back" onclick="hideSweetDetails()">Back to Products</button>
+                    </div>
+                </div>
+            </div>
+            <div id="gulab-jamun-details" class="sweet-details">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center">
+                        <img src="images/gulab_jamun.jpg" alt="Gulab Jamun - Syrup-soaked dough balls">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Gulab Jamun</h3>
+                        <p>Price: 380/-</p>
+                        <p>Deep-fried dough balls soaked in rose-flavored sugar syrup. A classic Indian dessert that melts in your mouth, perfect for festive gatherings.</p>
+                        <button class="btn-close-details" onclick="hideSweetDetails()">Close</button>
+                        <button class="btn-back" onclick="hideSweetDetails()">Back to Products</button>
+                    </div>
+                </div>
+            </div>
+            <div id="rabri-details" class="sweet-details">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center">
+                        <img src="images/rabri.jpg" alt="Rabri - A creamy milk dessert">
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Rabri</h3>
+                        <p>Price: 380/-</p>
+                        <p>A creamy, thickened milk dessert flavored with cardamom and garnished with almonds. A rich and indulgent sweet for special occasions.</p>
+                        <button class="btn-close-details" onclick="hideSweetDetails()">Close</button>
+                        <button class="btn-back" onclick="hideSweetDetails()">Back to Products</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section section">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-submit">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h4>Contact Info</h4>
+                    <p>Address: National Highway 2, Anand Vihar Colony, Ronchi Bangar, Koila Alipur Bangar, Uttar Pradesh 281006</p>
+                    <p>Phone: 07947113931</p>
+                    <p>Email: info@radhikaenterprises.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonial-section section">
+        <div class="container">
+            <h2 class="text-center mb-4">Testimonials</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p>"Mathura ka sabse best Peda! Bahut swadisht hai!"</p>
+                        <p>- Achal</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p>"Kesar Barfi ka swaad dil jeet liya! Gazab!"</p>
+                        <p>- Keshab</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <p>"Tyoharon ke liye perfect! Bahut badhiya!"</p>
+                        <p>- Abhishek</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Radhika Sweets © 2025</p>
+        <p>Established in 1994</p>
+        <p>Address: National Highway 2, Anand Vihar Colony, Ronchi Bangar, Koila Alipur Bangar, Uttar Pradesh 281006 | Phone: 07947113931 | Email: info@radhikaenterprises.com</p>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
+</body>
+</html>
